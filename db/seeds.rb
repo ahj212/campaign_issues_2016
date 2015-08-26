@@ -19,6 +19,12 @@ Candidate.create(name: "Martin Joseph O'Malley", political_affiliation: "Democra
 Candidate.create(name: "James Henry 'Jim' Webb, Jr.", political_affiliation: "Democratic", birth_date: "2/9/1946", experience: "Former U.S. Senator, Virginia", religion: "Protestant", home_state: "Virginia", total_raised: "N/A", summary: "Jim Webb is an American politician and author. He has served as a United States Senator from Virginia, Secretary of the Navy, Assistant Secretary of Defense, Counsel for the House Veterans Affairs Committee, and Marine Corps officer. In the private sector, he has been an Emmy-award winning journalist, a filmmaker, and the author of ten books. In addition, he taught literature at the United States Naval Academy and was a Fellow at the Harvard Institute of Politics. As a member of the Democratic Party, Webb announced on November 19, 2014, that he was forming an exploratory committee to evaluate a run for President of the United States in 2016. On July 2, 2015, he announced that he would be joining the race for the Democratic nomination for President.", img_url: "")
 Candidate.create(name: "Lincoln Davenport Chafee", political_affiliation: "Democratic", birth_date: "3/26/1953", experience: "Former Governor of Rhode Island", religion: "Episcopalian", home_state: "Rhode Island", total_raised: "$392,743", summary: "Lincoln Chafee is an American politician from Rhode Island who has served as the Mayor of Warwick (1993–1999), a U.S. Senator (1999–2007) and as the 74th Governor of Rhode Island (2011–2015). On April 9, 2015, Chafee announced that he was exploring a run for U.S. President as a Democrat in the 2016 election. Chafee formally announced the launch of his campaign on June 3, 2015.", img_url: "")
 
+Issue.create(topic: "Gun control")
+Issue.create(topic: "Drugs")
+Issue.create(topic: "Abortion")
+Issue.create(topic: "Immigration")
+Issue.create(topic: "Civil Rights")
+
 
 
 
