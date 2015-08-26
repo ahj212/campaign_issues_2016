@@ -1,4 +1,4 @@
-class CreateJoinTable < ActiveRecord::Migration
+class CreateJoinTableCandidatesIssues < ActiveRecord::Migration
   def change
     create_join_table :candidates, :issues do |t|
       # t.index [:candidate_id, :issue_id]
