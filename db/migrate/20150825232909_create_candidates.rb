@@ -7,7 +7,7 @@ class CreateCandidates < ActiveRecord::Migration
       t.string :experience
       t.string :religion
       t.string :homestate
-      t.integer :total_raised
+      t.string :total_raised
       t.text :summary
       t.text :img_url
     end
