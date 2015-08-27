@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
+  root to: 'homes#index'
 
+  get '' => 'homes#index'
+  get '/about' => 'homes#about'
+  get '/contact' => 'homes#contact'
+  
   resources :candidates, only: [:index, :show]
   resources :issues, only: [:index, :show]
 
-
   get 'compare/:candidate_id/:second_candidate_id/:issue_id' => 'candidates#compare'
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
