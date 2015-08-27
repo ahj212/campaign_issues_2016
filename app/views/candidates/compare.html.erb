@@ -1,15 +1,21 @@
-<%= @candidate_one.inspect %>
-<p><%= @candidate_one.name %></p>
-<br><br>
-<%= @candidate_two.inspect %>
-<p><%= @candidate_two.name %></p>
-
-<br><br>
-<%= @issue.inspect %>
 <p><%= @issue.topic %></p>
 <br><br>
-<%= @candidate_one_issues.inspect %>
-<p><%= @candidate_one_issues.position %></p>
 
+<li><%= @candidate_one.name %></li>
 <br><br>
-<%= @candidate_two_issues.inspect %>
+
+<% @candidate_one_issues.each do |candidate| %>
+  <% candidate.position.each do |position| %>
+    <ul> <%= position %> </ul>
+  <%end%>
+<% end %>
+<br><br>
+
+<li><%= @candidate_two.name %></li>
+<br><br>
+
+<% @candidate_two_issues.each do |candidate| %>
+   <%candidate.position.each do |position| %>
+     <ul> <%= position %> </ul>
+   <% end %>
+<% end %>
