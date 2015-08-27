@@ -1,1 +1,16 @@
-<h1>candidate show route</h1>
+<p>Name: <%= @candidate.name %> </p>
+<p>Birth date: <%= @candidate.birth_date %> </p>
+<p>Experience: <%= @candidate.experience %> </p>
+<p>Religion: <%= @candidate.religion %> </p>
+<p>Home State: <%= @candidate.home_state %> </p>
+<p>Total raised: <%= @candidate.total_raised %> </p>
+<p> <%= @candidate.summary %> </p>
+<br><br>
+
+<% @issue.each_with_index do |issue, index| %>
+  <li> <%= issue.topic %> </li>
+
+  <% @candidate_issue[index].position.each_with_index do |item, i| %>
+    <ul> <%= @candidate_issue[index].position[i] %> </ul>
+  <% end %>
+<% end %>

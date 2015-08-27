@@ -5,7 +5,11 @@ class CandidatesController < ApplicationController
   end
 
   def show
-
+  	@candidate = Candidate.find(params[:id])
+  	@issue = Issue.all
+  	#gets all the rows in candidate_issues where candidate_id corresponds to params id
+  	@candidate_issue = CandidateIssue.where(:candidate_id => params[:id])
+  	# binding.pry
   end
 
   def compare  	
@@ -15,7 +19,6 @@ class CandidatesController < ApplicationController
 
   	@candidate_one_issues = @candidate_one.candidate_issues.where(:issue_id => params[:issue_id])
   	@candidate_two_issues = @candidate_two.candidate_issues.where(:issue_id => params[:issue_id])
-  	binding.pry
   end
   # def index
   #   @artists = Artist.all
