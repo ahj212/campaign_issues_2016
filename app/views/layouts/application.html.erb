@@ -8,7 +8,24 @@
 </head>
 <body>
 
-<%= yield %>
+  <a href="/">home</a>
+  <a href="/candidates">candidates</a>
+  <a href="/issues">issues</a>
+  <br><br>
+  <!-- this submits to the compare-candidates route which is pointing to the candidates controller, compare action -->
+  <form action="/compare-candidates" method="POST">
+  	<!-- necessary for rails 4 -->
+  	<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  	<!-- :candidate_id, :second_candidate_id, :issue_id are named such because that's what we use inside candidates controller compare action -->
+  	<!-- options for select takes an array full of arrays that have the visible part of an option, the value of the optio, creating multi-dimensional array (just a nested array) -->
+  	<!-- the selected thing is the option that gets selected, and in the home route, it's not set, but that's okay because instance variables that don't exist don't break the views in rails -->
+    <%= select_tag(:candidate_id, options_for_select(@candidates.collect{|c| [ "#{c.name}", c.id ]}, @selected_c1)) %>
+    <%= select_tag(:second_candidate_id, options_for_select(@candidates.collect{|c| [ "#{c.name}", c.id ]}, @selected_c2)) %>
+    <%= select_tag(:issue_id, options_for_select(@issues.collect{|c| [ "#{c.topic}", c.id ]}, @selected_issue)) %>
+    <input type="submit" value="Compare Candidates">
+  </form>
+
+  <%= yield %>
 
 </body>
 </html>

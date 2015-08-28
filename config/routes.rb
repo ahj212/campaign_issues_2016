@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   resources :candidates, only: [:index, :show]
   resources :issues, only: [:index, :show]
 
-  get 'compare/:candidate_id/:second_candidate_id/:issue_id' => 'candidates#compare'
+  #get 'compare/:candidate_id/:second_candidate_id/:issue_id' => 'candidates#compare'
+  post 'compare-candidates' => "candidates#compare"
   
 
   # The priority is based upon order of creation: first created -> highest priority.
