@@ -1,21 +1,29 @@
-<p><%= @issue.topic %></p>
+<div class="candidate-comparison-issue">
+  <h2><%= @issue.topic %></h2>
+</div>
 <br><br>
 
-<li><%= @candidate_one.name %></li>
-<br><br>
+<div class="candidate-comparison-container">
+	<div class="candidate-one-container">
+		<li><%= @candidate_one.name %></li>
+		<br><br>
 
-<% @candidate_one_issues.each do |candidate| %>
-  <% candidate.position.each do |position| %>
-    <ul> <%= position %> </ul>
-  <%end%>
-<% end %>
-<br><br>
+		<% @candidate_one_issues.each do |candidate| %>
+		  <% candidate.position.each do |position| %>
+		    <ul> - <%= position %> </ul>
+		  <%end%>
+		<% end %>
+		<br><br>
+	</div>
 
-<li><%= @candidate_two.name %></li>
-<br><br>
+	<div class="candidate-two-container">
+		<li><%= @candidate_two.name %></li>
+		<br><br>
 
-<% @candidate_two_issues.each do |candidate| %>
-   <%candidate.position.each do |position| %>
-     <ul> <%= position %> </ul>
-   <% end %>
-<% end %>
+		<% @candidate_two_issues.each do |candidate| %>
+		   <%candidate.position.each do |position| %>
+		     <ul> - <%= position %> </ul>
+		   <% end %>
+		<% end %>
+	</div>
+</div>
