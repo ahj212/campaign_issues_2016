@@ -14,7 +14,11 @@
  *= require_self
  */
 
-/*navigation bar*/
+ body {
+ 	background-color: white;
+ }
+
+/*application view*/
 #nav-bar ul {
 	list-style-type: none;
 	margin: 0;
@@ -42,4 +46,25 @@
 
 #nav-bar a:hover, a:active {
 	background-color: #515151;
+}
+
+/*candidates index view*/
+#content {
+	margin-left: 125px;
+	margin-right: 125px;
+}
+
+#content #drop-down {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#content #democratic-poll {
+	float: left;
+	width: 700px;
+}
+
+#republican-poll {
+	float: right;
+	width: 700px;
 }
