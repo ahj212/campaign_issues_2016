@@ -1,16 +1,33 @@
-<p>Name: <%= @candidate.name %> </p>
-<p>Birth date: <%= @candidate.birth_date %> </p>
-<p>Experience: <%= @candidate.experience %> </p>
-<p>Religion: <%= @candidate.religion %> </p>
-<p>Home State: <%= @candidate.home_state %> </p>
-<p>Total raised: <%= @candidate.total_raised %> </p>
-<p> <%= @candidate.summary %> </p>
-<br><br>
+<div class="candidate-bio-container">
+	<h2>Candidate biography</h2>
 
-<% @issue.each_with_index do |issue, index| %>
-  <li> <%= issue.topic %> </li>
+	<div class="candidate-summary">
+		<br>
+		<p><span style="font-weight: bold">Name</span> - <%= @candidate.name %> </p>
+		<p><span style="font-weight: bold">Birth date</span> - <%= @candidate.birth_date %> </p>
+		<p><span style="font-weight: bold">Experience</span> - <%= @candidate.experience %> </p>
+		<p><span style="font-weight: bold">Religion</span> - <%= @candidate.religion %> </p>
+		<p><span style="font-weight: bold">Home State</span> - <%= @candidate.home_state %> </p>
+		<p><span style="font-weight: bold">Total raised</span> - <%= @candidate.total_raised %> </p>
+		<br><br><br>
+		<p><span style="font-weight: bold">Summary</span> - <%= @candidate.summary %> </p>
+	</div>
 
-  <% @candidate_issue[index].position.each_with_index do |item, i| %>
-    <ul> <%= @candidate_issue[index].position[i] %> </ul>
-  <% end %>
-<% end %>
+	<div class="candidate-portrait">
+		<br>
+	  <img src="<%= @candidate.img_url %>" height="600px" width="500px"/>
+	</div>
+</div>
+
+<div class="candidate-issue-container">
+<h2>Candidate stances</h2>
+<br>
+	<% @issue.each_with_index do |issue, index| %>
+	  <li> <%= issue.topic %> </li>
+
+	  <% @candidate_issue[index].position.each_with_index do |item, i| %>
+	    <ul> <%= "- " + @candidate_issue[index].position[i] %> </ul>
+	  <% end %>
+	  <br>
+	<% end %>
+</div>

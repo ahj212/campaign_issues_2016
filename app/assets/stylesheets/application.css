@@ -131,7 +131,7 @@ footer li {
 }
 
 /*candidate index view*/
-#candidate-index h1 {
+#candidate-index h2 {
 	font-size: 30px;
 }
 
@@ -139,10 +139,43 @@ footer li {
 	font-size: 20px;
 	text-decoration: none;
 	color: black;
-
 }
 
+/*candidate show view*/
+.candidate-bio-container {
+	width: 1436px;
+	height: 700px;
+}
 
+.candidate-bio-container h2 {
+	font-size: 30px;
+}
+
+.candidate-bio-container .candidate-summary {
+	width: 50%;
+	float: left;
+}
+
+.candidate-bio-container .candidate-summary p {
+	font-size: 20px;
+}
+
+.candidate-bio-container .candidate-portrait {
+	float: right;
+}
+
+.candidate-issue-container h2 {
+	font-size: 30px;
+}
+
+.candidate-issue-container li {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.candidate-issue-container ul {
+	font-size: 20px;
+}
 
 /*issue index view*/
 #issue-section h2 {
