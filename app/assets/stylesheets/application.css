@@ -19,10 +19,20 @@
  }
 
 /*application view*/
+#logo {
+}
+#logo h1 {
+	margin: 0px;
+	padding: 50px;
+	font-size: 75px;
+	font-family: 'Playball', cursive;
+	text-align: center;
+}
 #nav-bar ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0px;
+	font-family: 'PT Sans Narrow', sans-serif;
 	background-color: #191919;
 	overflow: hidden;
 }
@@ -33,9 +43,9 @@
 
 #nav-bar a:link, a:visited {
 	display: block;
-	width: 200px;
+	width: 125px;
 	font-weight: bold;
-	font-size: 30px;
+	font-size: 25px;
 	color: #FFFFFF;
 	background-color: #191919;
 	text-align: center;
@@ -48,13 +58,35 @@
 	background-color: #515151;
 }
 
+/*footer {
+	margin-top: 25px;
+	width: 100%;
+	bottom: 0;
+	position: fixed;
+}
+
+footer ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0px;
+	font-family: 'PT Sans Narrow', sans-serif;
+	text-align: center;
+	background-color: #191919;
+	overflow: hidden;	
+}
+
+footer li {
+	float: left;
+}
+*/
+
 /*candidates index view*/
 #content {
 	margin-left: 125px;
 	margin-right: 125px;
 }
 
-#content #drop-down {
+#drop-down {
 	margin-left: auto;
 	margin-right: auto;
 }

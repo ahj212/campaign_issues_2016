@@ -1,4 +1,16 @@
+<br><br>
+
+<div id="">
+  <p>The United States presidential election of 2016 is scheduled for Tuesday, November 8, 2016. It will be the 58th quadrennial U.S. presidential election. Voters will select presidential electors who in turn will elect a new president and vice president. The incumbent president, Barack Obama, is ineligible for a third term because of the Twenty-second Amendment to the United States Constitution.</p>
+  <p>Article Two of the United States Constitution provides that for a person to be elected and serve as President of the United States, the individual must be a natural-born citizen of the United States, at least 35 years old, and a resident of the United States for a period of no less than 14 years. Candidates for the presidency typically seek the nomination of one of the various political parties of the United States, in which case each party devises a method (such as a primary election) to choose the candidate the party deems best suited to run for the position. The party's delegates then officially nominate a candidate to run on the party's behalf.</p>
+  <p>Former First Lady, former Senator from New York, and former Secretary of State Hillary Clinton became the first Democrat to announce a candidacy for the presidency, which she did via a video on April 12, 2015. Nationwide opinion polls in 2015 have indicated that Clinton is the front-runner for the 2016 Democratic presidential nomination, but faces challenges from Independent Vermont Senator Bernie Sanders. Sanders became the second candidate when he made a formal announcement on April 30 that he was running for the Democratic nomination. Sanders's campaign stops have been drawing the largest crowds of any of the candidates in the run for president. Polling numbers have indicated that the gap between Clinton and Sanders is narrowing. Former Governor of Maryland Martin O'Malley was the third candidate to enter the race, which he did on May 30, 2015.Lincoln Chafee, former Independent Governor and Republican Senator of Rhode Island, announced his candidacy on June 3, 2015. Former Virginia Senator Jim Webb was the most recent Democrat to announce his candidacy, doing so on July 2, 2015.</p>
+  <p>United States Senator from Texas Ted Cruz became the first major candidate to announce a campaign in the 2016 election, which he did on March 23, 2015. Kentucky Senator Rand Paul became the next candidate to announce on April 7, 2015. Marco Rubio, Senator of Florida, became the next candidate, announcing on April 13. Both neurosurgeon Ben Carson and businesswoman Carly Fiorina announced their candidacies on May 4, 2015. Mike Huckabee, former Governor of Arkansas and 2008 presidential candidate, announced his candidacy the next day. 2012 presidential candidate and former Senator from Pennsylvania Rick Santorum announced his campaign on May 27. Former New York Governor George Pataki was the next to announce, doing so on May 28, 2015. Lindsey Graham, Senator from South Carolina, announced he was running on June 1. Former Governor of Texas Rick Perry, who also ran in 2012, announced he was running again on June 4. Former Governor of Florida Jeb Bush joined the race on June 15. Real estate developer and reality TV host Donald Trump announced he was running on June 16. Bobby Jindal, Governor of Louisiana, announced his campaign on June 24. Governor Chris Christie of New Jersey announced he was running on June 30. Governor of Wisconsin Scott Walker announced his candidacy on July 13. Ohio Governor John Kasich announced his run on July 21. Former Virginia Governor Jim Gilmore was the most recent Republican candidate to announce his candidacy, which he did on July 30, 2015.</p>
+
+</div>
+
+
 <div id='drop-down'>
+	<h2>Compare candidates</h2>
 	<!-- this submits to the compare-candidates route which is pointing to the candidates controller, compare action -->
 	<form action="/compare-candidates" method="POST">
 		<!-- necessary for rails 4 -->
@@ -9,12 +21,13 @@
 		<%= select_tag(:candidate_id, options_for_select(@candidates.collect{|c| [ "#{c.name}", c.id ]}, @selected_c1)) %>
 		<%= select_tag(:second_candidate_id, options_for_select(@candidates.collect{|c| [ "#{c.name}", c.id ]}, @selected_c2)) %>
 		<%= select_tag(:issue_id, options_for_select(@issues.collect{|c| [ "#{c.topic}", c.id ]}, @selected_issue)) %>
-		<input type="submit" value="Compare Candidates">
+		<input type="submit" value="Submit">
 	</form>
 </div>
 
-<br><br>
+
 <div id="poll">
+	<h2>Latest polls</h2>
   <%= image_tag("polls/democratic-primaries.png", :alt => "Demotracic Primaries poll", :id => "democratic-poll") %>
 
   <%= image_tag("polls/republican-primaries.png", :alt => "Republican Primaries poll", :id => "republican-poll") %>

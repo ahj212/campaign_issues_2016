@@ -2,16 +2,22 @@
 <html>
 <head>
   <title>CampaignIssues2016</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link href='https://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-	<!-- nav bar -->
+  <div id="logo">
+	<h1>2016 Presidential Campaign Issues</h1>
+  </div>
+	
 	<div id="nav-bar">
 		<ul>
 		  <li><a href="/">home</a></li>
+		  <li><a href="/about">about</a></li>
+  		<li><a href="/contact">contact</a></li>
 		  <li><a href="/candidates">candidates</a></li>
 		  <li><a href="/issues">issues</a></li>
 	  </ul>
