@@ -58,6 +58,14 @@
 	background-color: #515151;
 }
 
+h2 {
+	font-size: 30px;
+}
+
+#main-info p {
+	font-size: 20px;
+}
+
 /*footer {
 	margin-top: 25px;
 	width: 100%;
@@ -99,4 +107,13 @@ footer li {
 #republican-poll {
 	float: right;
 	width: 700px;
+}
+
+/*homes about view*/
+#about-section h2 {
+	font-size: 30px;
+}
+
+#about-section p {
+	font-size: 20px;
 }
